@@ -24,6 +24,7 @@ export default {
         RPosts
     }
 }
+    
 </script>
 
 <style scoped>

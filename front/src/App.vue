@@ -2,7 +2,7 @@
   <div id="nav">
     <Nav/>
   </div>
-  <div id="container">
+  <div id="container" v-on:scroll="scrollFunction">
       <Top/>
       <div class="router-view-wrap">
         <router-view/>
@@ -17,6 +17,22 @@ export default {
   components: {
     Nav,
     Top
+  },
+  created(){
+    window.addEventListener('scroll',this.handleScroll);
+  },
+  destroyed(){
+    window.removeEventListener('scroll',this.handleScroll);
+  },
+  methods:{
+    handleScroll(event){
+      let st = document.scrollingElement.scrollTop;
+      if(st >= 1300){
+        $('.cateBox').css({"position":"fixed","top":"15px","right":"calc((100% - 1160px) / 2)"});
+      }else if(st < 1300) {
+        $('.cateBox').css({"position":"absolute","top":"0","right":"0"});
+      }
+    }
   }
 }
 </script>
