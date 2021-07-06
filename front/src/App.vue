@@ -8,15 +8,18 @@
         <router-view/>
       </div>
   </div>
+  <Footer/>
 </template>
 
 <script>
 import Nav from "@/components/Nav";
 import Top from "@/components/Top";
+import Footer from "@/components/Footer";
 export default {
   components: {
     Nav,
-    Top
+    Top,
+    Footer
   },
   created(){
     window.addEventListener('scroll',this.handleScroll);

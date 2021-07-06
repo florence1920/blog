@@ -31,7 +31,7 @@ export default{
 
 <style scoped>
     .postWrap {position:relative;}
-    .postWrap .cateBox {width:275px; height:500px; background: rebeccapurple; position:absolute; top:0; right:0;}
+    .postWrap .cateBox {width:275px; height:300px; background: rebeccapurple; position:absolute; top:0; right:0;}
     .postWrap .cateBoxF {position:fixed;}
     .rPostList {padding: 0 294px 0 0;}
     .rPostList li {width:866px; margin: 0 0 16px; padding: 35px 32px 31px; background:#fff;}
